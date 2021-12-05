@@ -1,0 +1,2 @@
+= AdventOfCode
+Collection of solutions to the 2021 https://adventofcode.com[Advent Of Code] puzzles

@@ -1,3 +1,5 @@
+import AdventUtils
+
 def depth_changes(depth_list):
     print("Part 1 - Find the increases in depths")
     increases = 0
@@ -50,16 +52,8 @@ def sliding_window(depths):
             print("Increases: [{}] \nDecreases: [{}] \nSame Depth: [{}]\n".format(increase, decrease, same))
             loop = False
 
-def get_depths_from_file(filename):
-    print("Setup - Getting test data")
-    print("Getting depth values from [{}]".format(filename))
-    with open(filename, 'r') as f:
-        depths = [line.strip() for line in f]
-    print("Found [{}] depths\n".format(len(depths)))
-    return depths
-
 def main():
-    depths = get_depths_from_file('depths.txt') #Add depths here
+    depths = AdventUtils.get_data_from_file('depths.txt') #Add depths here
     depth_changes(depths)
 
     sliding_window(depths)
